@@ -28,7 +28,7 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 section-divider">
       <div className="container">
         <div className="text-center space-y-4 mb-16">
           <Badge className="bg-primary/10 text-primary border-primary/20">How It Works</Badge>

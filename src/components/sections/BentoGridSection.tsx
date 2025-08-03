@@ -5,7 +5,7 @@ import { Github, Linkedin, Brain, Zap, Users, Code2, ArrowRight, GitBranch, Mess
 
 export function BentoGridSection() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 section-divider">
       <div className="container">
         <div className="text-center space-y-4 mb-16">
           <Badge className="bg-primary/10 text-primary border-primary/20">Platform</Badge>

@@ -62,7 +62,7 @@ export function TestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 section-divider">
       <div className="container">
         <div className="text-center space-y-4 mb-16">
           <Badge className="bg-primary/10 text-primary border-primary/20">Testimonials</Badge>

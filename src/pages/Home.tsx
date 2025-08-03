@@ -9,9 +9,11 @@ import { BentoGridSection } from "@/components/sections/BentoGridSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Subtle gradient overlay for cohesive background */}
+      <div className="absolute inset-0 pointer-events-none bg-grid-white/[0.01] bg-[size:60px_60px] opacity-70" />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <FeaturesSection />
         <AboutSection />
@@ -19,7 +21,7 @@ export default function Home() {
         <TestimonialsSection />
         <BentoGridSection />
       </main>
-      <Footer />
+      <Footer />      
     </div>
   );
 }

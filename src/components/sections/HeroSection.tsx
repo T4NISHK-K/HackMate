@@ -4,7 +4,7 @@ import { ArrowRight, Code2, Users, Zap } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-32">
+    <section className="relative overflow-hidden py-20 lg:py-32 section-divider">
       {/* Background Effects */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />

@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* HackMate Design System - Modern, Clean, Aesthetic */
 
@@ -114,12 +114,18 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--border);
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: radial-gradient(circle at 50% 0%, hsla(351, 95%, 71%, 0.03) 0%, transparent 50%),
+                     radial-gradient(circle at 80% 80%, hsla(345, 82%, 67%, 0.02) 0%, transparent 40%);
+    background-attachment: fixed;
   }
 
   html {
@@ -261,5 +267,20 @@
     75% {
       transform: rotate(-1deg);
     }
+  }
+  
+  /* Subtle section dividers */
+  .section-divider {
+    position: relative;
+  }
+  
+  .section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsla(var(--border), 0.3), transparent);
   }
 }
