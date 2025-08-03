@@ -3,7 +3,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Spotlight } from '@/components/ui/spotlight';
-import { BorderBeam } from '@/components/ui/border-beam';
 import { CardHoverEffect } from '@/components/ui/pulse-card';
 import {
   Globe,
@@ -42,38 +41,38 @@ const defaultValues: AboutUsProps['values'] = [
   {
     title: 'Innovation',
     description:
-      'We constantly push boundaries and explore new possibilities in developer collaboration.',
+      'We constantly push boundaries and explore new possibilities to create cutting-edge solutions.',
     icon: 'Lightbulb',
   },
   {
     title: 'Collaboration',
     description:
-      'Building strong connections between developers to foster growth and learning.',
+      'We believe in the power of teamwork and diverse perspectives to achieve extraordinary results.',
     icon: 'Users',
   },
   {
     title: 'Excellence',
     description:
-      'Our AI-powered matching ensures the most accurate skill assessment and team formation.',
+      'We strive for perfection in everything we do, consistently delivering high-quality work.',
     icon: 'Sparkles',
   },
   {
     title: 'Impact',
     description:
-      "Creating meaningful connections that lead to successful projects and career growth.",
+      "We measure our success by the positive difference we make in people's lives and businesses.",
     icon: 'Globe',
   },
 ];
 
 export function AboutSection() {
   const aboutData = {
-    title: 'About HackMate',
+    title: 'About Us',
     subtitle:
-      'Revolutionizing developer collaboration through AI-powered skill matching.',
+      'Building the future of web development with beautiful, reusable components.',
     mission:
-      'To democratize access to high-quality development teams by using AI to match developers based on their skills, experience, and project needs. We\'re making it easier than ever to find the perfect collaborators for your next big idea.',
+      'Our mission is to democratize web development by providing high-quality, customizable components that help developers build stunning websites quickly and efficiently.',
     vision:
-      'We envision a world where every developer, regardless of their background or location, can easily find teammates who complement their skills and share their passion for building innovative solutions.',
+      'We envision a world where creating beautiful websites is accessible to everyone, regardless of their design or development experience.',
     values: defaultValues,
     className: 'relative overflow-hidden py-20',
   };
@@ -87,9 +86,9 @@ export function AboutSection() {
   return (
     <section id="about" className="relative w-full overflow-hidden pt-20">
       <Spotlight
-        gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(351, 95%, 71%, 0.08) 0, hsla(345, 82%, 67%, 0.04) 50%, hsla(351, 95%, 71%, 0) 80%)"
-        gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(351, 95%, 71%, 0.08) 0, hsla(345, 82%, 67%, 0.04) 80%, transparent 100%)"
-        gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(351, 95%, 71%, 0.06) 0, hsla(345, 82%, 67%, 0.06) 80%, transparent 100%)"
+        gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(336, 100%, 50%, 0.08) 0, hsla(341, 100%, 55%, 0.04) 50%, hsla(336, 100%, 45%, 0) 80%)"
+        gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(333, 100%, 85%, 0.08) 0, hsla(335, 100%, 55%, 0.04) 80%, transparent 100%)"
+        gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(332, 100%, 85%, 0.06) 0, hsla(327, 100%, 85%, 0.06) 80%, transparent 100%)"
       />
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
@@ -120,20 +119,16 @@ export function AboutSection() {
           >
             <motion.div
               whileHover={{ y: -5, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
-              className="group border-border/40 relative block overflow-hidden rounded-2xl border bg-gradient-to-br p-10 backdrop-blur-3xl"
+              className="group border-border/40 relative block overflow-hidden rounded-2xl border bg-gradient-to-br from-rose-950/10 to-rose-900/5 p-10 backdrop-blur-3xl"
             >
-              <BorderBeam
-                duration={8}
-                size={300}
-                className="via-primary/40 from-transparent to-transparent"
-              />
+              <div className="absolute inset-0 rounded-2xl before:absolute before:inset-0 before:rounded-2xl before:p-[1px] before:bg-gradient-to-r before:from-transparent before:via-rose-500/40 before:to-transparent" />
 
-              <div className="from-primary/20 to-primary/5 mb-6 inline-flex aspect-square h-16 w-16 flex-1 items-center justify-center rounded-2xl bg-gradient-to-br backdrop-blur-sm">
-                <Rocket className="text-primary h-8 w-8" />
+              <div className="from-rose-500/20 to-rose-500/5 mb-6 inline-flex aspect-square h-16 w-16 flex-1 items-center justify-center rounded-2xl bg-gradient-to-br backdrop-blur-sm">
+                <Rocket className="text-rose-500 h-8 w-8" />
               </div>
 
               <div className="space-y-4">
-                <h2 className="from-primary/90 to-primary/70 mb-4 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent">
+                <h2 className="from-rose-500/90 to-rose-400/70 mb-4 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent">
                   Our Mission
                 </h2>
 
@@ -145,14 +140,9 @@ export function AboutSection() {
 
             <motion.div
               whileHover={{ y: -5, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
-              className="group border-border/40 relative block overflow-hidden rounded-2xl border bg-gradient-to-br p-10 backdrop-blur-3xl"
+              className="group border-border/40 relative block overflow-hidden rounded-2xl border bg-gradient-to-br from-blue-950/10 to-blue-900/5 p-10 backdrop-blur-3xl"
             >
-              <BorderBeam
-                duration={8}
-                size={300}
-                className="from-transparent via-blue-500/40 to-transparent"
-                reverse
-              />
+              <div className="absolute inset-0 rounded-2xl before:absolute before:inset-0 before:rounded-2xl before:p-[1px] before:bg-gradient-to-r before:from-transparent before:via-blue-500/40 before:to-transparent" />
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 backdrop-blur-sm">
                 <Target className="h-8 w-8 text-blue-500" />
               </div>
