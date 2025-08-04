@@ -189,7 +189,7 @@ export function AboutSection() {
                   }
                   transition={{
                     duration: 0.6,
-                    delay: index * 0.1 + 0.2,
+                    delay: index * 0.15 + 0.3,
                     ease: 'easeOut',
                   }}
                   whileHover={{ y: -5, scale: 1.02 }}
