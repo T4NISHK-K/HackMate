@@ -68,27 +68,27 @@ export function Footer() {
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-rose-400 to-rose-700 text-2xl font-extrabold text-white shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-5 w-5"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
+                <path d="m18 16 4-4-4-4"></path>
+                <path d="m6 8-4 4 4 4"></path>
+                <path d="m14.5 4-5 16"></path>
               </svg>
             </span>
             <span className="bg-gradient-to-br from-rose-200 to-rose-500 bg-clip-text text-xl font-semibold tracking-tight text-transparent">
-              Mvpblocks
+              HackMate
             </span>
           </a>
           <p className="text-foreground mb-6 max-w-xs text-center text-sm md:text-left">
-            Mvpblocks provides a set of reusable components and utilities to
-            help you create beautiful and responsive user interfaces quickly and
-            efficiently.
+            HackMate connects developers through AI-powered skill matching to build amazing projects together.
           </p>
           <div className="mt-2 flex gap-3 text-rose-400">
             <a
@@ -143,7 +143,7 @@ export function Footer() {
         </nav>
       </div>
       <div className="text-foreground relative z-10 mt-10 text-center text-xs">
-        <span>&copy; 2025 Mvpblocks. All rights reserved.</span>
+        <span>&copy; 2025 HackMate. All rights reserved.</span>
       </div>
     </footer>
   );
