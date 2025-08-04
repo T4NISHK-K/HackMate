@@ -41,25 +41,25 @@ const defaultValues: AboutUsProps['values'] = [
   {
     title: 'Innovation',
     description:
-      'We constantly push boundaries and explore new possibilities to create cutting-edge solutions.',
+      'We embrace cutting-edge technology and creative thinking to build smart solutions that shape the future of collaboration.',
     icon: 'Lightbulb',
   },
   {
     title: 'Collaboration',
     description:
-      'We believe in the power of teamwork and diverse perspectives to achieve extraordinary results.',
+      'We believe in the power of teamwork—connecting diverse minds to turn ideas into impactful realities.',
     icon: 'Users',
   },
   {
     title: 'Excellence',
     description:
-      'We strive for perfection in everything we do, consistently delivering high-quality work.',
+      'We strive for the highest standards in user experience, performance, and purpose—delivering value with integrity.',
     icon: 'Sparkles',
   },
   {
     title: 'Impact',
     description:
-      "We measure our success by the positive difference we make in people's lives and businesses.",
+      'Every project, connection, and contribution on HackMate is driven by a mission to create real-world change that matters.',
     icon: 'Globe',
   },
 ];
@@ -68,11 +68,11 @@ export function AboutSection() {
   const aboutData = {
     title: 'About Us',
     subtitle:
-      'Building the future of web development with beautiful, reusable components.',
+      'Revolutionizing developer collaboration through AI-powered skill matching.',
     mission:
-      'Our mission is to democratize web development by providing high-quality, customizable components that help developers build stunning websites quickly and efficiently.',
+      'To empower students and tech enthusiasts by connecting them with like-minded collaborators, intelligently matching complementary skills through AI, and fostering impactful teamwork for hackathons, startups, and real-world projects.',
     vision:
-      'We envision a world where creating beautiful websites is accessible to everyone, regardless of their design or development experience.',
+      'To become the go-to student collaboration platform where AI bridges the gap between potential and performance—making skill-based networking, collaboration, and innovation seamless, accessible, and inspiring for every learner.',
     values: defaultValues,
     className: 'relative overflow-hidden py-20',
   };
@@ -171,8 +171,7 @@ export function AboutSection() {
               Our Core Values
             </h2>
             <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
-              The principles that guide everything we do and every decision we
-              make.
+              The foundational principles that drive our platform and shape how we connect developers worldwide.
             </p>
           </motion.div>
 
