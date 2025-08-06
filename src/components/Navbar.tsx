@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Code2, User, LogOut } from "lucide-react";
+import { AuthModal } from "@/components/auth/AuthModal";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -20,9 +21,14 @@ const navigation = [
 export function Navbar() {
   const location = useLocation();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const handleAuth = () => {
-    setIsLoggedIn(!isLoggedIn);
+    if (!isLoggedIn) {
+      setIsAuthModalOpen(true);
+    } else {
+      setIsLoggedIn(false);
+    }
   };
 
   return (
@@ -87,6 +93,12 @@ export function Navbar() {
           )}
         </div>
       </div>
+
+      {/* Auth Modal */}
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)} 
+      />
     </nav>
   );
 }

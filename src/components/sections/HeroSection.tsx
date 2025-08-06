@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code2, Users, Zap } from "lucide-react";
+import { useState } from "react";
+import { AuthModal } from "@/components/auth/AuthModal";
 
 export function HeroSection() {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  
+  const handleGetStarted = () => {
+    setIsAuthModalOpen(true);
+  };
   return (
     <section className="relative overflow-hidden py-20 lg:py-32 section-divider">
       {/* Background Effects */}
@@ -30,12 +37,14 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="gradient-primary shadow-elegant text-lg px-8">
-              <Link to="/explore">
-                <Users className="mr-2 h-5 w-5" />
-                Start Exploring
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+            <Button 
+              onClick={handleGetStarted}
+              size="lg" 
+              className="gradient-primary shadow-elegant text-lg px-8"
+            >
+              <Users className="mr-2 h-5 w-5" />
+              Start Exploring
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button asChild variant="outline" size="lg" className="text-lg px-8 border-primary/20 hover:bg-primary/10">
               <Link to="/compare">
@@ -73,6 +82,12 @@ export function HeroSection() {
       <div className="absolute bottom-20 left-20 opacity-20 animate-float" style={{ animationDelay: "2s" }}>
         <Zap className="h-7 w-7 text-primary" />
       </div>
+
+      {/* Auth Modal */}
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)} 
+      />
     </section>
   );
 }
