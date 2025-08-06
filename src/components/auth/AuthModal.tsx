@@ -83,11 +83,10 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             </Button>
 
             <div className="relative mb-6">
-              <Separator className="bg-white/10" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="bg-card px-3 text-xs text-muted-foreground">
-                  OR
-                </span>
+              <div className="flex items-center justify-center">
+                <div className="flex-grow h-px bg-white/10"></div>
+                <span className="px-3 text-xs text-muted-foreground">OR</span>
+                <div className="flex-grow h-px bg-white/10"></div>
               </div>
             </div>
 
